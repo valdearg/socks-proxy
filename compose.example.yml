@@ -1,0 +1,15 @@
+services:
+  socks-proxy:
+    build: .
+    container_name: socks-proxy
+    restart: unless-stopped
+    environment:
+      SSH_HOST: <server_address>
+      SOCKS_PORT: "4712"
+      SSH_USER: "root"
+      SSH_KEY: "<private_key_path>"
+      BIND_ADDRESS: "0.0.0.0"
+    ports:
+      - "4712:4712"
+    volumes:
+      - ${HOME}/.ssh:/root/.ssh:ro
