@@ -1,6 +1,10 @@
 # Introduction
 Creates a basic SOCKS5 proxy via SSH in a container. Can be connected to externally, e.g. browsers
 
+Replaces running tunnel manually through:
+
+`ssh -TND 4712 <server_address>`
+
 # Setup
 Need to set the known_hosts to contain the correct entries for the host:
 
