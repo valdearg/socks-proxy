@@ -5,10 +5,12 @@ Creates a basic SOCKS5 proxy via SSH in a container. Can be connected to externa
 Need to set the known_hosts to contain the correct entries for the host:
 
 Query the SSH server and download the hosts details:
-`ssh-keyscan -H kyaru.neko.network >> ~/.ssh/known_hosts`
+
+`ssh-keyscan -H <server_address> >> ~/.ssh/known_hosts`
 
 Then check this looks sensible:
-`ssh-keygen -F kyaru.neko.network -f ~/.ssh/known_hosts`
+
+`ssh-keygen -F <server_address> -f ~/.ssh/known_hosts`
 
 # Config
 Basic example of running the container, uses key based authentication to authenticate. 
